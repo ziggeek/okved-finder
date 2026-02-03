@@ -1,0 +1,21 @@
+services:
+  okved-finder:
+    image: okved-finder
+    container_name: okved-finder
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_PORT=8080
+      - JAVA_OPTS=-Xms256m -Xmx512m -XX:+UseG1GC
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:okved
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=password
+      - LOGGING_LEVEL_ROOT=INFO
+      - LOGGING_LEVEL_COM_OKVED_FINDER=DEBUG
+      - VAADIN_LAUNCH_BROWSER=false
+      - VAADIN_PRODUCTIONMODE=true
+      - OKVED_JSON_URL=https://raw.githubusercontent.com
