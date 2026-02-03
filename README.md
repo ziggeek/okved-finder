@@ -29,3 +29,7 @@ curl "http://localhost:8080/api/okved/find?phoneNumber=89991234567"
 ## Ссылки на лицензии ПО:
 - https://github.com/vaadin/framework/blob/master/LICENSE
 - https://github.com/spring-projects/spring-framework/blob/main/LICENSE.txt
+
+## Изображения
+
+![img.png](img.png)
